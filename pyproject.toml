@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "experimentos"
+version = "0.1.0"
+description = "A local research control centre with a deterministic synthetic curve simulator"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+exo = "experimentos.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["experimentos*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
